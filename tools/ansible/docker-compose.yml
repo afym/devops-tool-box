@@ -1,0 +1,9 @@
+version: "3"
+services:
+  ansible:
+    image: ansible-docker
+    build: .
+    volumes:
+    - ./../../source:/home/ansible
+    - ./../../command:/home/devops
+    command: sh /home/devops/run.sh

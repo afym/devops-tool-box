@@ -1,0 +1,9 @@
+version: "3"
+services:
+  ansible:
+    image: terraform-docker
+    build: .
+    volumes:
+    - ./../../source:/home/terraform
+    - ./../../command:/home/devops
+    command: sh /home/devops/run.sh
